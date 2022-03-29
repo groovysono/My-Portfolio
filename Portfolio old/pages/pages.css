@@ -5,6 +5,8 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -23,7 +25,7 @@ nav {
     background-color: aliceblue;
 }
 
-.nav-bar {
+.navbar {
     display: flex;
     justify-content: flex-end;
     list-style-type: none; 
@@ -39,6 +41,13 @@ li {
     height: 70px;
     margin-bottom: 30px;
     padding: auto 0;
+}
+
+.menu-btn{
+  color: rgb(2, 2, 2);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
 }
 /*Story Section*/
 .story{
@@ -91,16 +100,7 @@ li {
   margin-inline-end: 0px;
 }
 
-/*Media only hero*/
-@media only screen and (max-width: 935px) {
-  .hero-info {
-    max-width: 500px;
-  }
-  .hero-image {
-    visibility: hidden;
-    height: 0px;
-  }
-}
+
 
 #name {
     color: rgb(255, 255, 255);
@@ -243,7 +243,7 @@ section {
 }
 
 form {
-  margin: 10 0 40px 0;
+  margin: 0 0 40px 0;
 }
 
 form h2{
@@ -253,8 +253,8 @@ form h2{
 }
 
 .input-section {
-  margin: 10px 0;
-  display: flex;
+  /* margin-top: 70px; */
+  margin-bottom: 70px;
   font-size: 20px;
   justify-content: center;
 }
@@ -262,9 +262,14 @@ form h2{
 .input-group {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  margin: 0px 10px;
   width: 300px;
   height: 70px;
+}
+
+ textarea{
+  resize: none;
+  min-height: 100px;
 }
 
 .form-button {
@@ -322,4 +327,60 @@ a:hover {
 
 a:active {
     color:rgb(75, 0, 12)
+}
+
+@media only screen and (max-width: 870px){
+  .text{
+    max-width: 300px;
+    margin: 30px;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 868px){
+  .row{
+    max-width: 500px;
+    margin: 30px;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-btn{
+    display: block;
+    z-index: 999;
+    margin: 20px 10px;
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+    color: white;
+}
+nav .navbar{
+    display: block;
+    position: fixed;
+    height: 70vh;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+}
+nav .navbar.active{
+    left: 0;
+}
+nav .navbar li a{
+    display: inline-block;
+    color: white;
+    margin: 20px 0;
+    font-size: 25px;
+}
+  
+}
+
+@media only screen and (max-width: 510px){
+  .row{
+    max-width: 300px;
+  }
 }

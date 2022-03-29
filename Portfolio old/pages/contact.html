@@ -1,38 +1,51 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Portfolio old/pages/pages.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://kit.fontawesome.com/dfee8ef26e.js" crossorigin="anonymous"></script>
-    <title>Contact</title>
+    <title>AO Portfolio|Contact</title>
 </head>
 <body>
 
     <nav>
       <a href="/Portfolio old/index.html"><img class="logo" src="/Portfolio old/src/images/logo.png" alt="Arinze Onochie logo"></a>
-        <ul class="nav-bar">
+        <ul class="navbar">
             <li><a href="/Portfolio old/pages/about.html">About me</a></li>
             <li><a href="/Portfolio old/pages/projects.html">Projects</a></li>    
             <li><a href="https://github.com/groovysono" target="_blank">GitHub</a></li>
             <li><a href="/Portfolio old/pages/contact.html">Contact Me</a></li>       
         </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
     </nav>
   
     <h1>Contact</h1>
       <section>
-        <form action="">
+        <form action="https://formsubmit.co/azonochie@gmail.com" method="POST">
             <h2>Contact Me</h2>
             <div class="input-section">
               <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email"  name="email" placeholder="Email Address" required>
+              </div>
+              <div class="input-group">
                 <label for="first-name">First name:</label>
-                <input type="text" id="first-name" name="first-name" value="">
+                <input type="text" id="first-name" name="first-name" value="" required>
               </div>
               <div class="input-group">
                 <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" name="last-name" value="">
+                <input type="text" id="last-name" name="last-name" value="" required>
               </div>
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" class="form-element" placeholder="Message"></textarea>
+             </div>
             </div>
             <div class="input-section">  
               <input type="radio" id="office" name="answer" value="office">
@@ -63,11 +76,13 @@
     
     <footer id="footer">
         <ul class="links">
-            <li><a href="/Portfolio old/pages/about.html">About me</a></li>
-            <li><a href="/Portfolio old/pages/contact.html">Contact</a></li>
+            <li><a href="/Portfolio old/pages/projects.html">About me</a></li>
+            <li><a href="/Portfolio old/pages/projects.html">Contact</a></li>
             <li><a href="https://github.com/groovysono" target="_blank">GitHub</a></li>
         </ul>
     </footer>
+
+    <script src="/Portfolio old/pages/pages.js"></script>
 
 </body>
 </html>
